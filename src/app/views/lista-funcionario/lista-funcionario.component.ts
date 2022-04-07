@@ -4,6 +4,7 @@ import { Funcionario } from 'src/app/models/funcionario';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-lista-funcionario',
   templateUrl: './lista-funcionario.component.html',
@@ -18,7 +19,7 @@ export class ListaFuncionarioComponent implements OnInit {
     private route:ActivatedRoute ,
     private router:Router,
     private modalService: NgbModal ,
-    
+
     ) { }
 
   ngOnInit(): void {
@@ -62,7 +63,7 @@ export class ListaFuncionarioComponent implements OnInit {
 
   excluirFuncionario(id_funcionario:String){
     this.funcionarioService.excluirFuncionario(id_funcionario).subscribe({
-      error: () => { 
+      error: () => {
       this.router.navigate([`/listaFuncionarios`]) } ,
       complete: () => {
         console.log('deletado');
