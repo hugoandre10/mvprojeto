@@ -1,0 +1,57 @@
+<!-- Edição do funcionário -->
+<div class="card container mb-5 mt-5 w-50 p-5">
+  <div class="box-title my-2 mb-3">
+    <h5 class="card-title titulo">Editar Funcionário</h5>
+  </div>
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Nome do Funcionário</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="funcionario.func_nome"
+        name="func_nome"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">CPF do Funcionário</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="funcionario.func_cpf"
+        name="func_cpf"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Alimento do Funcionário</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="funcionario.func_alimento"
+        name="func_alimento"
+      />
+    </div>
+
+    <!-- Se CPF ou Alimento já estiver cadastrado no banco , a div está ativada -->
+    <div *ngIf="duplicado == true">
+      <p class="text-danger">
+        CPF ou Alimento já cadastrado , por favor utilize outros.
+      </p>
+    </div>
+
+    <div class="mt-5 mb-4">
+      <button
+        (click)="editarFuncionario()"
+        class="btn btn-primary mx-2 mb-3 cadastrar"
+      >
+        Editar
+      </button>
+      <button
+        routerLink="/listaFuncionarios"
+        class="btn btn-secondary cancel mb-3 mx-3"
+      >
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
