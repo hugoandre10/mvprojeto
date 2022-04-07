@@ -1,4 +1,9 @@
-# MvProjetoFront2
+# MvProjetoFront
+
+Desafio MV , aplicação realizada com uso das linguagens de programação Java (back-end) + Angular (front-end) , aplicação atendendo à todos os requisitos solicitados ,
+
+back-end hospedado através do heroku e front-end hospedado através do githubpages.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
